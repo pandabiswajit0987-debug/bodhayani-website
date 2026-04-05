@@ -1,19 +1,19 @@
 body {
-  background-color: black;
-  color: gold;
+  background-color: rgb(211, 194, 194);
+  color: rgb(58, 78, 209);
   text-align: center;
   font-family: Arial;
 }
 
 button {
   padding: 10px 20px;
-  background-color: gold;
-  color: black;
+  background-color: rgb(33, 70, 163);
+  color: rgb(219, 216, 216);
   border: none;
   cursor: pointer;
 }
 .courses {
-  background: #111;
+  background: #efeaea;
 }
 
 .course-box {
@@ -23,8 +23,8 @@ button {
 }
 
 .course-box div {
-  background: gold;
-  color: black;
+  background: rgb(34, 61, 129);
+  color: rgb(236, 232, 232);
   padding: 20px;
   border-radius: 8px;
   font-weight: bold;
@@ -42,8 +42,8 @@ button {
 }
 
 .exam-box div, .facility-box div {
-  background: gold;
-  color: black;
+  background: rgb(34, 132, 170);
+  color: rgb(234, 226, 226);
   padding: 15px 20px;
   border-radius: 6px;
   font-weight: bold;
@@ -53,4 +53,7 @@ header {
 }
 button:hover {
   background: orange;
+}
+header img {
+  margin-bottom: 10px;
 }
