@@ -1,48 +1,104 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
-    <img src="logo.jpeg" width="120">
   <title>Bodhayani Institute</title>
+
+  <!-- Mobile Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1>Bodhayani Institute</h1>
-  <p>Where Choices Become Careers</p>
+  <!-- Header -->
+  <header>
+    <img src="logo.jpeg" width="120">
+    <h1>Bodhayani Institute</h1>
+    <p>Where Choices Become Careers</p>
 
-  <button onclick="showMessage()">Contact Us</button>
+    <button onclick="showMessage()">Contact Us</button>
 
+    <!-- Register Button -->
+    <br><br>
+    <a href="YOUR-GOOGLE-FORM-LINK" target="_blank">
+      <button>Register Now</button>
+    </a>
+  </header>
+
+  <!-- Courses -->
+  <section class="courses">
+    <h2>Courses Offered</h2>
+
+    <div class="course-box">
+      <div onclick="showCourse('medical')">Medical</div>
+      <div onclick="showCourse('engineering')">Engineering</div>
+      <div onclick="showCourse('law')">Law</div>
+      <div onclick="showCourse('management')">Management</div>
+      <div onclick="showCourse('aviation')">Hospitality & Aviation</div>
+    </div>
+
+    <!-- Info Box -->
+    <div id="course-info"></div>
+  </section>
+
+  <!-- Exams -->
+  <section class="exams">
+    <h2>Exams We Cover</h2>
+
+    <div class="exam-box">
+      <div>NEET</div>
+      <div>JEE Main</div>
+      <div>WBJEE</div>
+      <div>JELET</div>
+      <div>CUET</div>
+    </div>
+  </section>
+
+  <!-- Facilities -->
+  <section class="facilities">
+    <h2>Our Facilities</h2>
+
+    <div class="facility-box">
+      <div>Student Credit Card Support</div>
+      <div>Education Loan Assistance</div>
+      <div>Career Counselling</div>
+      <div>Admission Guidance</div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <h2>Student Registration</h2>
+
+    <form>
+      <input type="text" placeholder="Full Name" required><br><br>
+      <input type="tel" placeholder="Mobile Number" required><br><br>
+      <input type="text" placeholder="Father's Name" required><br><br>
+
+      <select required>
+        <option value="">Course Interested In</option>
+        <option>MBBS</option>
+        <option>B.Tech</option>
+        <option>Nursing</option>
+        <option>Law</option>
+        <option>BBA / MBA</option>
+      </select><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/916294486895?text=Hello%20I%20am%20interested%20in%20admission"
+     target="_blank"
+     class="whatsapp">
+     💬
+  </a>
+
+  <!-- JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
-<section class="courses">
-  <h2>Courses Offered</h2>
-
-  <div class="course-box">
-    <div>Medical (MBBS, Nursing, Paramedical)</div>
-    <div>Engineering (B.Tech, Polytechnic)</div>
-    <div>Law (BA LLB, LLB ,BBA LLB)</div>
-    <div>Management (BBA ,BCA ,MHA, MBA)</div>
-    <div>Hospitality & Aviation</div>
-  </div>
-</section>
-<section class="exams">
-  <h2>Exams We Cover</h2>
-  <div class="exam-box">
-    <div>NEET</div>
-    <div>JEE Main</div>
-    <div>WBJEE</div>
-    <div>JELET</div>
-    <div>CUET</div>
-  </div>
-</section>
-
-<section class="facilities">
-  <h2>Our Facilities</h2>
-  <div class="facility-box">
-    <div>Student Credit Card Support</div>
-    <div>Education Loan Assistance</div>
-    <div>Career Counselling</div>
-    <div>Admission Guidance</div>
-  </div>
-</section>

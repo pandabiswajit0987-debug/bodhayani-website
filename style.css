@@ -1,39 +1,86 @@
+
+/* RESET + BODY */
 body {
-  background-color: rgb(211, 194, 194);
-  color: rgb(58, 78, 209);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
   text-align: center;
-  font-family: Arial;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: rgb(33, 70, 163);
-  color: rgb(219, 216, 216);
-  border: none;
-  cursor: pointer;
+/* HEADER */
+header {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  padding: 60px 20px;
 }
+
+header img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* BUTTONS */
+button {
+  padding: 12px 25px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* SECTIONS */
+section {
+  padding: 40px 20px;
+}
+
+/* COURSES */
 .courses {
-  background: #efeaea;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .course-box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
 .course-box div {
-  background: rgb(34, 61, 129);
-  color: rgb(236, 232, 232);
+  background: #1e3c72;
+  color: white;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
-}
-.exams, .facilities {
-  padding: 30px;
-  text-align: center;
+  transition: 0.3s;
+  min-width: 150px;
+  cursor: pointer;
 }
 
+.course-box div:hover {
+  transform: translateY(-5px);
+  background: #2a5298;
+}
+
+/* INFO BOX (CLICK RESULT) */
+#course-info {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* EXAMS + FACILITIES */
 .exam-box, .facility-box {
   display: flex;
   flex-wrap: wrap;
@@ -42,18 +89,93 @@ button {
 }
 
 .exam-box div, .facility-box div {
-  background: rgb(34, 132, 170);
-  color: rgb(234, 226, 226);
+  background: #00b4db;
+  color: white;
   padding: 15px 20px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: bold;
+  transition: 0.3s;
 }
-header {
-  padding: 60px 20px;
+
+.exam-box div:hover,
+.facility-box div:hover {
+  transform: scale(1.05);
 }
-button:hover {
-  background: orange;
+
+/* FORM */
+.form-section {
+  padding: 50px 20px;
 }
-header img {
+
+form {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+form input, form select {
+  padding: 12px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
   margin-bottom: 10px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  animation: pulse 1.5s infinite;
+}
+
+/* WHATSAPP ANIMATION */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.whatsapp:hover {
+  transform: scale(1.2);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .course-box,
+  .exam-box,
+  .facility-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form input, form select {
+    width: 90%;
+  }
+
+  header {
+    padding: 40px 15px;
+  }
+
 }
